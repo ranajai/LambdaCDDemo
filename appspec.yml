@@ -1,5 +1,9 @@
-version: 0
+version: 0.0
 Resources:
-    - {MyFunction: {Type: 'AWS::Lambda::Function', Properties: {Name: "", Alias: "", CurrentVersion: "", TargetVersion: ""}}}
-Hooks:
-    - {LifeCycleEvent: ""}
+  - email_submition:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "email_submition"
+        Alias: "default"
+        CurrentVersion: "1"
+        TargetVersion: "2"
